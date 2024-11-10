@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'yaml-linter'
+errors = YamlLinter.lint(ARGV[0])
+if errors.size > 0
+  puts errors
+  exit 1
+else
+  puts "Linted OK"
+end
